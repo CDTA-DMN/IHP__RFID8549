@@ -1,4 +1,4 @@
-# RFID8549
+# LDO
 
 Single-technology IP library.
 

@@ -1,4 +1,4 @@
-# RFID8549
+# RECTIFIER
 
 Single-technology IP library.
 

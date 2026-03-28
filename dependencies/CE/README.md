@@ -1,4 +1,4 @@
-# RFID8549
+# CE
 
 Single-technology IP library.
 

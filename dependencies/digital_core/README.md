@@ -1,4 +1,4 @@
-# RFID8549
+# digital_core
 
 Single-technology IP library.
 
