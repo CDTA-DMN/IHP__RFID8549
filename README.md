@@ -22,36 +22,36 @@ Pin 1 is the bottom-left pin (red marker); pins are numbered counter-clockwise f
 it. Pad IDs give the die side, counted left to right on N/S and bottom to top on E/W,
 die seen from above as in the GDS. The map was traced from the release GDS.
 
-| Pin | Pad | Name            | Type        | Function                                               |
-| --: | --- | --------------- | ----------- | ------------------------------------------------------ |
-|   1 | S1  | `AC2`           | antenna     | coil terminal 2, bare pad (no ESD)                     |
-|   2 | S2  | `AC1`           | antenna     | coil terminal 1, bare pad (no ESD)                     |
-|   3 | S3  | `V_RECT`        | analog out  | rectifier output                                       |
-|   4 | S4  | `CE_AC1`        | analog in   | clock extractor input 1                                |
-|   5 | S5  | `CE_AC2`        | analog in   | clock extractor input 2                                |
-|   6 | S6  | `MOD_IN`        | digital in  | load modulator control                                 |
-|   7 | S7  | `CE_CLK`        | digital out | clock extractor output (recovered carrier)             |
-|   8 | E1  | `POR_RESET_N`   | digital out | power-on reset, active low                             |
-|   9 | E2  | `POR_EN`        | digital out | power-on-reset enable                                  |
-|  10 | E3  | `POWER_STABLE`  | digital in  | core start-up enable, also enables the clock extractor |
-|  11 | E4  | `CLK_AFE`       | digital in  | core functional clock (134.2 kHz), also clocks the POR |
-|  12 | E5  | `RESET_N_AFE`   | digital in  | core reset, active low                                 |
-|  13 | E6  | `MODULATED_BIT` | digital out | bi-phase encoded telegram                              |
-|  14 | E7  | `SPI_MISO`      | digital out | DFT SPI data out (tri-state)                           |
-|  15 | N7  | `SPI_CS_N`      | digital in  | DFT SPI chip select, active low                        |
-|  16 | N6  | `SPI_MOSI`      | digital in  | DFT SPI data in                                        |
-|  17 | N5  | `SPI_SCK`       | digital in  | DFT SPI clock                                          |
-|  18 | N4  | `VSS`           | ground      | core ground                                            |
-|  19 | N3  | `DVDD`          | supply      | digital core supply, 1.2 V                             |
-|  20 | N2  | `IOVSS`         | ground      | IO ring ground                                         |
-|  21 | N1  | `IOVDD`         | supply      | IO ring supply                                         |
-|  22 | W7  | `IOVDD`         | supply      | IO ring supply                                         |
-|  23 | W6  | `IOVSS`         | ground      | IO ring ground                                         |
-|  24 | W5  | `AVDD`          | supply      | analog supply rail                                     |
-|  25 | W4  | `BGR_VBIAS`     | analog out  | bandgap bias output, also the LDO_2 reference          |
-|  26 | W3  | `LDO2_VOUT`     | analog out  | LDO_2 output                                           |
-|  27 | W2  | `LDO1_VREF`     | analog in   | LDO_1 reference input                                  |
-|  28 | W1  | `LDO1_VOUT`     | analog out  | LDO_1 output                                           |
+| Pin | Pad | Name                | Type        | Function                                               |
+| --: | --- | ------------------- | ----------- | ------------------------------------------------------ |
+|   1 | S1  | `AC2`               | antenna     | coil terminal 2, bare pad (no ESD)                     |
+|   2 | S2  | `AC1`               | antenna     | coil terminal 1, bare pad (no ESD)                     |
+|   3 | S3  | `V_RECT`            | analog out  | rectifier output                                       |
+|   4 | S4  | `CE_AC1`            | analog in   | clock extractor input 1                                |
+|   5 | S5  | `CE_AC2`            | analog in   | clock extractor input 2                                |
+|   6 | S6  | `MODULATED_BIT_IN`  | digital in  | load modulator control                                 |
+|   7 | S7  | `CLK_OUT`           | digital out | clock extractor output (recovered carrier)             |
+|   8 | E1  | `RESET_N_OUT`       | digital out | power-on reset, active low                             |
+|   9 | E2  | `POWER_STABLE_OUT`  | digital out | power-on-reset enable                                  |
+|  10 | E3  | `POWER_STABLE_IN`   | digital in  | core start-up enable, also enables the clock extractor |
+|  11 | E4  | `CLK_IN`            | digital in  | core functional clock (134.2 kHz), also clocks the POR |
+|  12 | E5  | `RESET_N_IN`        | digital in  | core reset, active low                                 |
+|  13 | E6  | `MODULATED_BIT_OUT` | digital out | bi-phase encoded telegram                              |
+|  14 | E7  | `SPI_MISO`          | digital out | DFT SPI data out (tri-state)                           |
+|  15 | N7  | `SPI_CS_N`          | digital in  | DFT SPI chip select, active low                        |
+|  16 | N6  | `SPI_MOSI`          | digital in  | DFT SPI data in                                        |
+|  17 | N5  | `SPI_SCK`           | digital in  | DFT SPI clock                                          |
+|  18 | N4  | `VSS`               | ground      | core ground                                            |
+|  19 | N3  | `DVDD`              | supply      | digital core supply, 1.2 V                             |
+|  20 | N2  | `IOVSS`             | ground      | IO ring ground                                         |
+|  21 | N1  | `IOVDD`             | supply      | IO ring supply                                         |
+|  22 | W7  | `IOVDD`             | supply      | IO ring supply                                         |
+|  23 | W6  | `IOVSS`             | ground      | IO ring ground                                         |
+|  24 | W5  | `AVDD`              | supply      | analog supply rail                                     |
+|  25 | W4  | `BGR_OUT`           | analog out  | bandgap bias output, also the LDO_2 reference          |
+|  26 | W3  | `LDO2_OUT`          | analog out  | LDO_2 output                                           |
+|  27 | W2  | `LDO1_VREF`         | analog in   | LDO_1 reference input                                  |
+|  28 | W1  | `LDO1_OUT`          | analog out  | LDO_1 output                                           |
 
 ## Overview
 
@@ -71,15 +71,15 @@ be tested on its own, and an SPI test port reaches the digital core with no RF f
 
 LibreLane on IHP SG13G2, corners `nom_typ_1p20V_25C`, `nom_slow_1p08V_125C` and `nom_fast_1p32V_m40C`.
 
-| Metric                               | Value                                                    |
-| ------------------------------------ | -------------------------------------------------------- |
-| Flip-flops                           | 244                                                      |
-| Standard cells                       | 1421 (+5206 fill)                                        |
-| Utilisation                          | 31.3 %                                                   |
-| Clocks                               | `CLK_AFE` 134.2 kHz (functional), `SPI_SCK` 4 MHz (test) |
-| Worst setup slack                    | +61.65 ns                                                |
-| Worst hold slack                     | +0.12 ns                                                 |
-| DRC (Magic, KLayout) / LVS / antenna | 0 / 0 / 0                                                |
+| Metric                               | Value                                                   |
+| ------------------------------------ | ------------------------------------------------------- |
+| Flip-flops                           | 244                                                     |
+| Standard cells                       | 1421 (+5206 fill)                                       |
+| Utilisation                          | 31.3 %                                                  |
+| Clocks                               | `CLK_IN` 134.2 kHz (functional), `SPI_SCK` 4 MHz (test) |
+| Worst setup slack                    | +61.65 ns                                               |
+| Worst hold slack                     | +0.12 ns                                                |
+| DRC (Magic, KLayout) / LVS / antenna | 0 / 0 / 0                                               |
 
 ---
 
@@ -90,16 +90,16 @@ LibreLane on IHP SG13G2, corners `nom_typ_1p20V_25C`, `nom_slow_1p08V_125C` and 
 The AFE and the digital core are not wired together on the die. Strap these pads on
 the test board to run the tag from an RF field:
 
-| From               | To                | Signal                                |
-| ------------------ | ----------------- | ------------------------------------- |
-| 7 `CE_CLK`         | 11 `CLK_AFE`      | recovered carrier clock               |
-| 8 `POR_RESET_N`    | 12 `RESET_N_AFE`  | core reset                            |
-| 9 `POR_EN`         | 10 `POWER_STABLE` | power good                            |
-| 13 `MODULATED_BIT` | 6 `MOD_IN`        | encoded telegram to the modulator     |
-| 2 `AC1`            | 4 `CE_AC1`        | carrier to the clock extractor        |
-| 1 `AC2`            | 5 `CE_AC2`        | carrier to the clock extractor        |
-| 3 `V_RECT`         | 24 `AVDD`         | rectified supply to the analog blocks |
-| 28 `LDO1_VOUT`     | 19 `DVDD`         | regulated supply to the digital core  |
+| From                   | To                   | Signal                                |
+| ---------------------- | -------------------- | ------------------------------------- |
+| 7 `CLK_OUT`            | 11 `CLK_IN`          | recovered carrier clock               |
+| 8 `RESET_N_OUT`        | 12 `RESET_N_IN`      | core reset                            |
+| 9 `POWER_STABLE_OUT`   | 10 `POWER_STABLE_IN` | power good                            |
+| 13 `MODULATED_BIT_OUT` | 6 `MODULATED_BIT_IN` | encoded telegram to the modulator     |
+| 2 `AC1`                | 4 `CE_AC1`           | carrier to the clock extractor        |
+| 1 `AC2`                | 5 `CE_AC2`           | carrier to the clock extractor        |
+| 3 `V_RECT`             | 24 `AVDD`            | rectified supply to the analog blocks |
+| 28 `LDO1_OUT`          | 19 `DVDD`            | regulated supply to the digital core  |
 
 Leave the straps open to drive the core from a bench instrument or an MCU instead.
 
@@ -107,7 +107,6 @@ Leave the straps open to drive the core from a bench instrument or an MCU instea
 
 - **`SPI_MISO` needs a pull-down.** The data and enable pins of its tri-state pad are
   swapped. With a pull-down the pad still reads correctly while the core drives MISO.
-- **The bandgap reference output is not routed.** Drive `LDO1_VREF` from the bench.
 - **`AC1` and `AC2` are bare bond pads** with no ESD protection, each about 200 Ω in
   series before the limiter.
 
